@@ -3,7 +3,9 @@
 puts "Deleting movie/actor data..."
 Movie.destroy_all
 Actor.destroy_all
+Role.destroy_all
 
+#Creating Sample data to test models and associations 
 puts "Creating movies..."
 mean_girls = Movie.create(title: "Mean Girls", box_office_earnings: 129_000_000)
 spice_world = Movie.create(title: "Spice World", box_office_earnings: 151_000_000)
@@ -23,5 +25,7 @@ puts "Creating roles..."
 # * and a role belongs to an actor.                         *
 # ***********************************************************
 # Create Roles Here
+
+r1 = Role.create(actor_id: ginger_spice.id, movie_id: spice_world.id, salary: 6, character_name: "Brodie")
 
 puts "Seeding done!"

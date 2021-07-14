@@ -6,3 +6,9 @@ class CreateActors < ActiveRecord::Migration[5.2]
     end
   end
 end
+
+
+#create tables in your database
+#database is in sql language
+#AR translates database from sql language
+#models interaact w/ the database
