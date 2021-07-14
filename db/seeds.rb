@@ -2,6 +2,7 @@ puts "Clearing old data..."
 Magazine.destroy_all
 Reader.destroy_all
 
+
 puts "Seeding magazines..."
 magazines = ["The New Yorker", "National Geographic", "Wired", "People", "Cosmopolitan", "Time", "US Weekly", "New York Magazine"]
 # Create sample magazines
@@ -27,7 +28,11 @@ puts "Seeding subscriptions..."
 
   # TODO: create subscriptions! Remember, a subscription belongs to a reader
   # and a subscription belongs to a magazine.
+  Subscription.create(reader_id: reader_id, magazine_id: magazine_id, price: price)
   
 end
 
 puts "Done!"
+
+#look at the reader_id : reader_id (right- referencing the varibale on like 23)
+#(left - referencing the attribute on the actual subscription in our schema file )
