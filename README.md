@@ -1,4 +1,4 @@
-# Object Relations Practice Code Challenge - Magazines
+## Object Relations Practice Code Challenge - Magazines
 
 ## Introduction
 
