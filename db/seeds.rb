@@ -28,4 +28,6 @@ puts "Creating roles..."
 
 r1 = Role.create(actor_id: ginger_spice.id, movie_id: spice_world.id, salary: 6, character_name: "Brodie")
 
+r1 = Role.create(actor_id: scary_spice.id, movie_id: mean_girls.id, salary: 6, character_name: "Middleton")
+
 puts "Seeding done!"
