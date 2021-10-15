@@ -4,17 +4,17 @@ class Reader < ActiveRecord::Base
 
   def subscribe(magazine, price)
     Subscription.create(magazine_id: magazine.id, price: price, reader_id: self.id)
-    #this method is called on the reader, therefore we don't need an #arg for it if we are caling it on the reader itsel, which is what #were are trying to access
+    #this method is called on the reader, therefore we don't need an #arg for it if we are caling it on the reader itself, which is what #were are trying to access
   end
 
 
   #we can add .sum at the end of pi
   def total_subcription_price
-    self.subscriptions.map { |sub| sub.price}.sum
+    self.subscriptions.map { |sub| sub.price }.sum
   end
 
   def cancel_subscription(magazine)
-    #self.subscriptions.find { |sub| sub.magazine == magazine}.destroy
+    self.subscriptions.find { |sub| sub.magazine == magazine}.destroy
 end
 
 end

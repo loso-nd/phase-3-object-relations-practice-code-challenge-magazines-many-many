@@ -10,4 +10,5 @@ end
 
 
 #creating a funciton that writes a loop, encased with methods that can create things with keys
+#we are calling method on a table ( t.integer : price )
 #foreign keys have id's
